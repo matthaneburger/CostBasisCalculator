@@ -20,7 +20,7 @@ class CRSRCoveredCallsTracker:
         return self.__coveredCallsCost
     def getCCPremium(self):
         return self.__coveredCallsPremium
-    def getCCInfo(self):
+    def getInfo(self):
         print("Premium from selling CC's: $" + str(self.getCCPremium()))
         print("Cost of buying CC's: $" + str(self.getCCCost()))
         print("Total ROI from Covered Calls: $" + str(self.getTotalCCProfit()))

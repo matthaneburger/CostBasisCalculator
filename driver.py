@@ -38,8 +38,8 @@ for i in range(options_premiumPaid.size):
     crsrCCs.purchasedCoveredCall(options_premiumPaid[i])
 
 #methods to display data
-crsrCostBasis.getNumberOfShares()
-crsrCostBasis.totalCostBasis()
-crsrCCs.getCCInfo()
+crsrCostBasis.getInfo()
+print(crsrCostBasis.totalCostBasis())
+crsrCCs.getInfo()
 crsr_price=si.get_live_price("crsr")
 print("Current Price: $" + str(round(crsr_price,2)))

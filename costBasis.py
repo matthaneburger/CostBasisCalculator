@@ -16,6 +16,9 @@ class CRSRCostBasis:
         return self.costBasis
     def totalCostBasis(self):
         result=self.__sumOfCostBasis/self.__totalNumberOfShares
-        print("Cost Basis: $" + str(round(result,2)))
+        return result
     def getNumberOfShares(self):
-        print("Shares of CRSR: " + str(self.__totalNumberOfShares))
+        return self.__totalNumberOfShares
+    def getInfo(self):
+        print("Total Shares of CRSR: " +str(self.getNumberOfShares()))
+        print("Running Cost Basis: " + str(round(self.totalCostBasis(),2)))
