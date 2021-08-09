@@ -6,7 +6,9 @@ Less succinctly, Vanguard does not have the ability to track your entire ROI for
 
 ## To Run...
 MacOS w/ Python Installed:
+
 chmod +x ./driver.py
+
 ./driver.py
 
 ## Issues
