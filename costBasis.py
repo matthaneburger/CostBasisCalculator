@@ -27,18 +27,21 @@ class CRSRCostBasis:
     def getNumberOfShares(self):
         return self.__totalNumberOfShares
 
-    def calculateProfitLoss(self):
+    def calculateProfitLossPercentage(self):
         self.currentValue=self.__totalNumberOfShares*self.__crsr_price
         self.gainloss=(self.currentValue-self.__sumOfCostBasis)/self.__sumOfCostBasis
         if(self.gainloss>0):
-            print("lol, yeah right.")
-            pass
+            return bcolors.OKGREEN + str('{:.3%}'.format(self.gainloss)) + bcolors.ENDC
         elif(self.gainloss<0):
             return bcolors.FAIL + str('{:.3%}'.format(self.gainloss)) + bcolors.ENDC
+    
+    def calculatePaperGainLoss(self):
+        #TODO: return the overall paper gain or loss
+        pass
 
     def getInfo(self):
         print("Total Shares of CRSR: " +str(self.getNumberOfShares()))
         print("Running Cost Basis: " + str(round(self.totalCostBasis(),2)))
-        print("Percentage Gain/Loss: " + self.calculateProfitLoss())
+        print("Percentage Gain/Loss: " + self.calculateProfitLossPercentage())
 
     
