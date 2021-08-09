@@ -12,10 +12,12 @@ chmod +x ./driver.py
 ./driver.py
 
 ## Issues
-Need to add error handling. Currently, the program fails with nasty looking TraceBack errors when the values on the numer of shares does not have a 1:1 value for share cost. 
+Need to add error handling. Currently, the program fails with nasty looking TraceBack errors when the values on the numberOfShares column don't have a 1:1 value for share cost. 
 
 ## Next Steps
-Main next steps is to put all of the data into a GetInfo() method and just make the getters and setters just return values. Originally, I was just making this program for the Ave. Cost Basis but then I started wanting more and more information. So, major refactoring is necessary.
+Main next steps is to put all of the data into a GetInfo() method and just make the getters and setters just return values. Originally, I was just making this program for the Ave. Cost Basis but then I started wanting more and more information. So, major refactoring is necessary. 
 
 Make program use ticker as input to draw data e.g. not make this CRSR-oriented. Potentially change input stream from Excel file to something different.
+
+Create a GUI representing the opportunity cost of selling VTSAX to invest into this asset, as well as the price of Ave. Cost Basis needed to recoup losses. 
 
