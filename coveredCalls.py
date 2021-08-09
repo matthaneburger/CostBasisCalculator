@@ -15,8 +15,12 @@ class CRSRCoveredCallsTracker:
         self.__runningTotal-=cost
         self.__coveredCallsCost+=cost
     def getTotalCCProfit(self):
-        print("Total ROI from Covered Calls: $" + str(self.__runningTotal))
+        return self.__runningTotal
     def getCCCost(self):
-        print("Cost of buying Covered Calls: $" + str(self.__coveredCallsCost))
+        return self.__coveredCallsCost
     def getCCPremium(self):
-        print("Premium from selling Covered Calls: $" + str(self.__coveredCallsPremium))
+        return self.__coveredCallsPremium
+    def getCCInfo(self):
+        print("Premium from selling CC's: $" + str(self.getCCPremium()))
+        print("Cost of buying CC's: $" + str(self.getCCCost()))
+        print("Total ROI from Covered Calls: $" + str(self.getTotalCCProfit()))

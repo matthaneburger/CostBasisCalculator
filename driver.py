@@ -40,6 +40,6 @@ for i in range(options_premiumPaid.size):
 #methods to display data
 crsrCostBasis.getNumberOfShares()
 crsrCostBasis.totalCostBasis()
-crsrCCs.getTotalCCProfit()
+crsrCCs.getCCInfo()
 crsr_price=si.get_live_price("crsr")
 print("Current Price: $" + str(round(crsr_price,2)))
