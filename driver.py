@@ -3,9 +3,7 @@ from costBasis import CRSRCostBasis
 import sys
 import os
 import pandas as pd
-import costBasis
 from coveredCalls import CRSRCoveredCallsTracker
-from yahoo_fin import stock_info as si
 
 #retrieval of excel data frames
 crsr_shares_df = pd.read_excel('./CRSRTrackingGrid.xlsx',
@@ -39,7 +37,5 @@ for i in range(options_premiumPaid.size):
 
 #methods to display data
 crsrCostBasis.getInfo()
-print(crsrCostBasis.totalCostBasis())
+crsrCostBasis.totalCostBasis()
 crsrCCs.getInfo()
-crsr_price=si.get_live_price("crsr")
-print("Current Price: $" + str(round(crsr_price,2)))
