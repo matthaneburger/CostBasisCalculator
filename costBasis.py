@@ -23,6 +23,9 @@ class CRSRCostBasis:
     def totalCostBasis(self):
         result=self.__sumOfCostBasis/self.__totalNumberOfShares
         return result
+    
+    def getCurrentPrice(self):
+        return self.__crsr_price
 
     def getNumberOfShares(self):
         return self.__totalNumberOfShares
@@ -47,6 +50,8 @@ class CRSRCostBasis:
     def getInfo(self):
         print("Total Shares of CRSR: " +str(self.getNumberOfShares()))
         print("Running Ave. Cost Basis: $" + str(round(self.totalCostBasis(),2)))
+        print("Current Price CRSR: $" + str(round(self.getCurrentPrice(),2)))
+        print()
         print("Percentage Gain/Loss: " + self.calculateProfitLossPercentage())
         print("Total Paper Gain/Loss: " + self.calculatePaperGainLoss())
         print()
