@@ -55,5 +55,3 @@ class CRSRCostBasis:
         print("Percentage Gain/Loss: " + self.calculateProfitLossPercentage())
         print("Total Paper Gain/Loss: " + self.calculatePaperGainLoss())
         print()
-
-    
