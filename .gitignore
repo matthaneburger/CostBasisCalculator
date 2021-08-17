@@ -1,5 +1,6 @@
 __pycache__/
-./src/aux_py/__pycache__
-./src/crsr_classes/__pycache__
-./src/crsr_data/~$CRSRTrackingGrid.xlsx
+/src/aux_py/__pycache__
+/src/crsr_classes/__pycache__
+/src/crsr_data/~$CRSRTrackingGrid.xlsx
+crsr_data/~$CRSRTrackingGrid.xlsx
 GUI.py
