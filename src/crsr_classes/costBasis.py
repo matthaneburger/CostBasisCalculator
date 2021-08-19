@@ -43,6 +43,12 @@ class CRSRCostBasis:
             return bcolors.OKGREEN +"$"+str(round(abs(self.gainloss),2))+bcolors.ENDC
         elif(self.gainloss<0):
             return bcolors.FAIL +"-$"+str(round(abs(self.gainloss),2))+bcolors.ENDC
+    
+    def valueOfCurrentInvestment(self):
+        return self.__totalNumberOfShares * self.__crsr_price
+    
+    def printCurrentInvestmentValue(self):
+        print("Current Value: $" + str(round(self.valueOfCurrentInvestment(),2)))
 
     def getInfo(self):
         print("Total Shares of CRSR: " +str(self.getNumberOfShares()))

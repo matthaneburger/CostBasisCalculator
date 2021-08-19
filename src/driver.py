@@ -40,3 +40,7 @@ crsrCostBasis.getInfo()
 crsrCostBasis.totalCostBasis()
 crsrCCs.getInfo()
 crsrOppCost.getInfo()
+
+#most important numbers
+crsrCostBasis.printCurrentInvestmentValue()
+crsrOppCost.printWhatItWouldBeToday()

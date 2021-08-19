@@ -16,8 +16,11 @@ class CRSROpportunityCost:
     
     def whatItWouldBeToday(self):
         return self.__numVTSAXshares*self.getVTSAXPrice()
+    
+    def printWhatItWouldBeToday(self):
+        print("What it would be today (Live Price): $" + str(round(self.whatItWouldBeToday(),2)))
 
     def getInfo(self):
         print("Current price of VTSAX: $" + str(round(self.getVTSAXPrice(),2)))
         print("Value of Original Investment upon selling: $" + str(round(self.priceOfOriginalInvestment(),2)))
-        print("What it would be today (Live Price): $" + str(round(self.whatItWouldBeToday(),2)))
+        print()
