@@ -3,6 +3,7 @@ import pandas as pd
 from crsr_classes.costBasis import CRSRCostBasis
 from crsr_classes.coveredCalls import CRSRCoveredCallsTracker
 from crsr_classes.crsrOpportunityCost import CRSROpportunityCost
+from aux_py.formatting import formatAsMoney as fm
 
 #retrieval of excel data frames
 crsr_shares_df = pd.read_excel('./crsr_data/CRSRTrackingGrid.xlsx',
@@ -45,4 +46,4 @@ crsrOppCost.getInfo()
 crsrCostBasis.printCurrentInvestmentValue()
 crsrOppCost.printWhatItWouldBeToday()
 sad = crsrCostBasis.valueOfCurrentInvestment() - crsrOppCost.whatItWouldBeToday()
-print("Total Spread of Current Investment and Current Value of Opportunity Cost: " + str("{:,.2f}".format(round(sad,2))))
+print("Total Spread of Current Investment and Current Value of Opportunity Cost: " + str(fm(sad)))

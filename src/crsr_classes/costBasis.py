@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 from aux_py.colors import bcolors
+from aux_py.formatting import formatAsMoney as fm
 from yahoo_fin import stock_info as si
 
 class CRSRCostBasis:
@@ -40,20 +41,20 @@ class CRSRCostBasis:
         self.currentValue=self.__totalNumberOfShares*self.__crsr_price
         self.gainloss=(self.currentValue-self.__sumOfCostBasis)
         if(self.gainloss>0):
-            return bcolors.OKGREEN +"$"+str(round(abs(self.gainloss),2))+bcolors.ENDC
+            return bcolors.OKGREEN +"$"+str(fm(abs(self.gainloss)))+bcolors.ENDC
         elif(self.gainloss<0):
-            return bcolors.FAIL +"-$"+str(round(abs(self.gainloss),2))+bcolors.ENDC
+            return bcolors.FAIL +"-"+str(fm(abs(self.gainloss)))+bcolors.ENDC
     
     def valueOfCurrentInvestment(self):
         return self.__totalNumberOfShares * self.__crsr_price
     
     def printCurrentInvestmentValue(self):
-        print("Current Value: $" + str(round(self.valueOfCurrentInvestment(),2)))
+        print("Current Value: " + str(fm(self.valueOfCurrentInvestment())))
 
     def getInfo(self):
         print("Total Shares of CRSR: " +str(self.getNumberOfShares()))
-        print("Running Ave. Cost Basis: $" + str(round(self.totalCostBasis(),2)))
-        print("Current Price CRSR: $" + str(round(self.getCurrentPrice(),2)))
+        print("Running Ave. Cost Basis: " + str(fm(self.totalCostBasis())))
+        print("Current Price CRSR: " + str(fm(self.getCurrentPrice())))
         print("Percentage Gain/Loss: " + self.calculateProfitLossPercentage())
         print("Total Paper Gain/Loss: " + self.calculatePaperGainLoss())
         print()

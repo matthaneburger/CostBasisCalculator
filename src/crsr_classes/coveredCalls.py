@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+from aux_py.formatting import formatAsMoney as fm
+
 class CRSRCoveredCallsTracker:
     __runningTotal=0
     __coveredCallsPremium=0
@@ -23,12 +25,9 @@ class CRSRCoveredCallsTracker:
 
     def getCCPremium(self):
         return self.__coveredCallsPremium
-    
-    def formatAsMoney(self,number):
-        return "${:,.2f}".format(number)
         
     def getInfo(self):
-        print("Premium from selling CC's: " + str(self.formatAsMoney(self.getCCPremium())))
-        print("Cost of buying CC's: " + str(self.formatAsMoney(self.getCCCost())))
-        print("Total ROI from Covered Calls: " + str(self.formatAsMoney(self.getTotalCCProfit())))
+        print("Premium from selling CC's: " + str(fm(self.getCCPremium())))
+        print("Cost of buying CC's: " + str(fm(self.getCCCost())))
+        print("Total ROI from Covered Calls: " + str(fm(self.getTotalCCProfit())))
         print()

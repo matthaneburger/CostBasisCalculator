@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-import requests as rq
 import yfinance as yf
+from aux_py.formatting import formatAsMoney as fm
 
 class CRSROpportunityCost:
     __numVTSAXshares=311.5150
@@ -18,12 +18,9 @@ class CRSROpportunityCost:
         return self.__numVTSAXshares*self.getVTSAXPrice()
     
     def printWhatItWouldBeToday(self):
-        print("What it would be today (Live Price): " + str(self.formatAsMoney(self.whatItWouldBeToday())))
-
-    def formatAsMoney(self,number):
-            return "${:,.2f}".format(number)
+        print("What it would be today (Live Price): " + str(fm(self.whatItWouldBeToday())))
             
     def getInfo(self):
-        print("Current price of VTSAX: " + str(self.formatAsMoney(self.getVTSAXPrice())))
-        print("Value of Original Investment upon selling: " + str(self.formatAsMoney(self.priceOfOriginalInvestment())))
+        print("Current price of VTSAX: " + str(fm(self.getVTSAXPrice())))
+        print("Value of Original Investment upon selling: " + str(fm(self.priceOfOriginalInvestment())))
         print()
