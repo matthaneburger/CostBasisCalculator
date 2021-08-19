@@ -44,3 +44,5 @@ crsrOppCost.getInfo()
 #most important numbers
 crsrCostBasis.printCurrentInvestmentValue()
 crsrOppCost.printWhatItWouldBeToday()
+sad = crsrCostBasis.valueOfCurrentInvestment() - crsrOppCost.whatItWouldBeToday()
+print("Total Spread of Current Investment and Current Value of Opportunity Cost: " + str("{:,.2f}".format(round(sad,2))))
