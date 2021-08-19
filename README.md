@@ -12,7 +12,8 @@ chmod +x ./driver.py
 ./driver.py
 
 ##Output
-![Alt text](/CostBasisCalculator/blob/master/src/assets/screenshotOutput.png?raw=true "Output")
+
+![Alt text](/src/assets/screenshotOutput.png?raw=true "Output")
 
 ## Issues
 Need to add error handling. Currently, the program fails with nasty looking TraceBack errors when the values on the numberOfShares column don't have a 1:1 value for share cost. 
