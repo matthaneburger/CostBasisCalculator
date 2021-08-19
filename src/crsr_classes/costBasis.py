@@ -49,7 +49,7 @@ class CRSRCostBasis:
         return self.__totalNumberOfShares * self.__crsr_price
     
     def printCurrentInvestmentValue(self):
-        print("Current Value: " + str(fm(self.valueOfCurrentInvestment())))
+        print("Current Value of CRSR Investment: " + str(fm(self.valueOfCurrentInvestment())))
 
     def getInfo(self):
         print("Total Shares of CRSR: " +str(self.getNumberOfShares()))
