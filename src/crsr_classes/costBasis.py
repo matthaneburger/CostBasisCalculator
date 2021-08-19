@@ -39,7 +39,6 @@ class CRSRCostBasis:
             return bcolors.FAIL + str('{:.3%}'.format(self.gainloss)) + bcolors.ENDC
     
     def calculatePaperGainLoss(self):
-        #TODO: return the overall paper gain or loss
         self.currentValue=self.__totalNumberOfShares*self.__crsr_price
         self.gainloss=(self.currentValue-self.__sumOfCostBasis)
         if(self.gainloss>0):
@@ -51,7 +50,6 @@ class CRSRCostBasis:
         print("Total Shares of CRSR: " +str(self.getNumberOfShares()))
         print("Running Ave. Cost Basis: $" + str(round(self.totalCostBasis(),2)))
         print("Current Price CRSR: $" + str(round(self.getCurrentPrice(),2)))
-        print()
         print("Percentage Gain/Loss: " + self.calculateProfitLossPercentage())
         print("Total Paper Gain/Loss: " + self.calculatePaperGainLoss())
         print()
