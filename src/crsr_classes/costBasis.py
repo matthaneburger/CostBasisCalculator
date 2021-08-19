@@ -1,6 +1,4 @@
 #!/usr/bin/env python3
-import sys
-import os
 from aux_py.colors import bcolors
 from yahoo_fin import stock_info as si
 

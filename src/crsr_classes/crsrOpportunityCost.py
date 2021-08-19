@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
-import sys
-import os
-from yahoo_fin import stock_info as si
+import requests as rq
+import yfinance as yf
 
 class CRSROpportunityCost:
-    __vtsax=si.get_live_price("vtsax")
     __numVTSAXshares=311.5150
+    __priceVTSAXSold=100.24
+    __data=yf.download('VTSAX')
 
-    def __init__(self):
-        pass
+    def getVTSAXPrice(self):
+        price=self.__data['Close'][-1]
+        return price
 
-    def getVTSAX(self):
-        return self.__vtsax
-        
+    def priceOfOriginalInvestment(self):
+        return self.__numVTSAXshares*self.__priceVTSAXSold
+    
+    def whatItWouldBeToday(self):
+        return self.__numVTSAXshares*self.getVTSAXPrice()
+
     def getInfo(self):
-        print("Price of VTSAX: $" + str(round(self.getVTSAX(),2)))
+        print("Current price of VTSAX: $" + str(round(self.getVTSAXPrice(),2)))
+        print("Value of Original Investment upon selling: $" + str(round(self.priceOfOriginalInvestment(),2)))
+        print("What it would be today (Live Price): $" + str(round(self.whatItWouldBeToday(),2)))

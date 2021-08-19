@@ -1,9 +1,8 @@
 #!/usr/bin/env python3
-import sys
-import os
 import pandas as pd
 from crsr_classes.costBasis import CRSRCostBasis
 from crsr_classes.coveredCalls import CRSRCoveredCallsTracker
+from crsr_classes.crsrOpportunityCost import CRSROpportunityCost
 
 #retrieval of excel data frames
 crsr_shares_df = pd.read_excel('./crsr_data/CRSRTrackingGrid.xlsx',
@@ -18,6 +17,7 @@ crsr_ccs_df = pd.read_excel('./crsr_data/CRSRTrackingGrid.xlsx',
 #objects created from outside classes
 crsrCostBasis = CRSRCostBasis()
 crsrCCs = CRSRCoveredCallsTracker()
+crsrOppCost = CRSROpportunityCost()
 
 #retrieves all values from excel sheet
 shares_numberOfShares = crsr_shares_df['NumberOfShares'].values
@@ -39,3 +39,4 @@ for i in range(options_premiumPaid.size):
 crsrCostBasis.getInfo()
 crsrCostBasis.totalCostBasis()
 crsrCCs.getInfo()
+crsrOppCost.getInfo()

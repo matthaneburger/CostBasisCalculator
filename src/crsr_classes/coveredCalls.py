@@ -1,7 +1,4 @@
 #!/usr/bin/env python3
-import sys
-import os
-
 class CRSRCoveredCallsTracker:
     __runningTotal=0
     __coveredCallsPremium=0
@@ -31,3 +28,4 @@ class CRSRCoveredCallsTracker:
         print("Premium from selling CC's: $" + str(self.getCCPremium()))
         print("Cost of buying CC's: $" + str(self.getCCCost()))
         print("Total ROI from Covered Calls: $" + str(self.getTotalCCProfit()))
+        print()
