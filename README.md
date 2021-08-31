@@ -11,6 +11,10 @@ chmod +x ./driver.py
 
 ./driver.py
 
+## Output
+
+![Alt text](/src/assets/screenshotOutput.png?raw=true "Output")
+
 ## Issues
 Need to add error handling. Currently, the program fails with nasty looking TraceBack errors when the values on the numberOfShares column don't have a 1:1 value for share cost. 
 
@@ -19,5 +23,5 @@ Fixed Getters and Setters. Added GetInfo for CoveredCalls and CostBasis Classes.
 
 Make program use ticker as input to draw data e.g. not make this CRSR-oriented. Potentially change input stream from Excel file to something different. [BACKLOG]
 
-Create a GUI representing the opportunity cost of selling VTSAX to invest into this asset, as well as the price of Ave. Cost Basis needed to recoup losses. [INPROGRESS]
+Create a GUI representing the opportunity cost of selling VTSAX to invest into this asset, as well as the price of Ave. Cost Basis needed to recoup losses. [BACKLOG]
 
