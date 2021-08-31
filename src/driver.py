@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 import pandas as pd
+from aux_py.colors import bcolors
 from crsr_classes.costBasis import CRSRCostBasis
 from crsr_classes.coveredCalls import CRSRCoveredCallsTracker
 from crsr_classes.crsrOpportunityCost import CRSROpportunityCost
 from aux_py.formatting import formatAsMoney as fm
+from colorama import Fore
 
 #retrieval of excel data frames
 crsr_shares_df = pd.read_excel('./crsr_data/CRSRTrackingGrid.xlsx',
@@ -46,4 +48,5 @@ crsrOppCost.getInfo()
 crsrCostBasis.printCurrentInvestmentValue()
 crsrOppCost.printWhatItWouldBeToday()
 sad = crsrCostBasis.valueOfCurrentInvestment() - crsrOppCost.whatItWouldBeToday()
-print("Total Spread of Current Investment and Current Value of Opportunity Cost: " + str(fm(sad)))
+blueStr =(bcolors.BLUE + str(fm(sad)))
+print("Total Spread of Current Investment and Current Value of Opportunity Cost: " + blueStr)

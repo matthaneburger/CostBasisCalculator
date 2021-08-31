@@ -1,3 +1,4 @@
+#ANSI Colors: https://pypi.org/project/colorama/
 class bcolors:
     HEADER = '\033[95m'
     OKBLUE = '\033[94m'
@@ -8,3 +9,5 @@ class bcolors:
     ENDC = '\033[0m'
     BOLD = '\033[1m'
     UNDERLINE = '\033[4m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
