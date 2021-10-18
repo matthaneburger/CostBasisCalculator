@@ -3,12 +3,19 @@
 #building out the skeleton for the program -- may look messy but will make code more modular as I get a better idea of how I want this structured
 from yahoo_fin import stock_info as si
 from aux_py.formatting import formatAsMoney as fm
+# TODO: breaking imports into different classes once structured is settled
 
 class VanguardPortfolio():
     def __init__(self) -> None:
         pass
 
+    def opportunityCost(self):
+        # TODO: add in VTSAX to track "Goal Number"
+        # TODO: decide whether to import code from csrs_data
+        pass
+
     def getLivePricesVanguardPortfolio(self):
+        # TODO: will be fixing a lot of these hardcoded values later on
         __cloudflare=si.get_live_price("NET")
         __apple=si.get_live_price("AAPL")
         __aehr=si.get_live_price("AEHR")
@@ -30,6 +37,7 @@ class VanguardPortfolio():
 
         total=net+aapl+aehr+asts+tsm+dnn+apps+uuuu+settlementfund
 
+        # TODO: create print method -- this looks ugly
         print("Cloudflare: " + fm(net))
         print("Apple: " + fm(aapl))
         print("AEHR Test Systems: " + fm(aehr))
@@ -42,16 +50,13 @@ class VanguardPortfolio():
         print("Total: " + fm(total))
 
     
-
+#for now, this is a class -- since it's static, can figure out if this is not necessary
 class CRSRLoss():
     def __init__(self) -> None:
         self.__costbasis=45.51
         self.__totalSharesOfCRSR=733
         self.__CRSRCurrentPrice=si.get_live_price("CRSR")
         print("crsr constructor")
-    
-    
-
 
 def main():
     vp = VanguardPortfolio()
