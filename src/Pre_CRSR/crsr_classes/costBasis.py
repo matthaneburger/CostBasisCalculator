@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-from aux_py.colors import bcolors
-from aux_py.formatting import formatAsMoney as fm
+from Pre_CRSR.aux_py.colors import bcolors
+from Pre_CRSR.aux_py.formatting import formatAsMoney as fm
 from yahoo_fin import stock_info as si
 
 class CRSRCostBasis:

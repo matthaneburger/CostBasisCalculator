@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 import yfinance as yf
-from aux_py.formatting import formatAsMoney as fm
+from Pre_CRSR.aux_py.formatting import formatAsMoney as fm
 
 class CRSROpportunityCost:
     __numVTSAXshares=311.5150
