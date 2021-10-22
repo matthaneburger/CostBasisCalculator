@@ -9,7 +9,7 @@ TODO
 
 ## Output
 
-![Alt text](/PRE_CRSR/src/assets/screenshotOutput.png?raw=true "Output")
+![Alt text](https://github.com/matthaneburger/CostBasisCalculator/blob/master/src/Pre_CRSR/assets/screenshotOutput.png?raw=true "Output")
 
 ## Issues
 Will update this readme later on...
