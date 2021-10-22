@@ -9,7 +9,7 @@ TODO
 
 ## Output
 
-![Alt text](/src/assets/screenshotOutput.png?raw=true "Output")
+![Alt text](/PRE_CRSR/src/assets/screenshotOutput.png?raw=true "Output")
 
 ## Issues
 Will update this readme later on...
@@ -18,4 +18,3 @@ Will update this readme later on...
 Restructure project. [FIXED]
 
 Leavng CRSR and investing in other assets to account for loss Will update this readme later on... [BACKLOG]
-
