@@ -17,4 +17,4 @@ Will update this readme later on...
 ## Next Steps
 Restructure project. [FIXED]
 
-Leavng CRSR and investing in other assets to account for loss Will update this readme later on... [BACKLOG]
+Leaving CRSR and investing in other assets to account for loss Will update this readme later on... [BACKLOG]
